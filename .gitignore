@@ -1,0 +1,41 @@
+# Директории сборки
+bin/
+obj/
+
+# Файлы пользователя
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Файлы окружения
+.env
+appsettings.Development.json
+
+# Временные файлы
+_ReSharper.*
+*.cache
+
+# Выходные данные компилятора
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# Файлы пакетов NuGet
+packages/
+*.nupkg
+
+# Файлы редакторов
+.vs/
+.idea/
+.vscode/
+
+# Выходные файлы
+*.exe
+*.dll
+*.pdb
