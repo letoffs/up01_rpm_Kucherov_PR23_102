@@ -18,6 +18,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
    options.UseNpgsql(connectionString));
 
 builder.Services.AddScoped<IScheduleService, ScheduleService>();
+builder.Services.AddScoped<IGroupService, GroupService>();
 
 builder.Services.AddControllers();
 
@@ -33,7 +34,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection();
 app.UseMiddleware<ExceptionMiddleware>();
 
 app.UseAuthorization();
@@ -41,4 +42,4 @@ app.UseRouting();
 
 app.MapControllers();
 
-app.Run();
+app.Run("http://0.0.0.0:5282");
